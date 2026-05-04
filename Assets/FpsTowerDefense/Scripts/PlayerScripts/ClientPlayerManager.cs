@@ -28,28 +28,11 @@ public class ClientPlayerManager : NetworkBehaviour
             _inputComponent.enabled = true;
             _input.enabled = true;
             _lookScript.enabled = true;
-        }
-
-        if(IsServer)
-        {
             _movementScript.enabled = true;
         }
 
     }
 
-    private void LateUpdate()
-    {
-        if (!IsOwner)
-            return;
-        UpdaterInputServerRpc(_input.move, _input.look, _input.jump);
-    }
-
-    [Rpc(SendTo.Server)]
-    void UpdaterInputServerRpc(Vector2 Move, Vector2 Look, bool Jump)
-    {
-        _input.MoveInput(Move);
-        _input.LookInput(Look);
-        _input.JumpInput(Jump);
-    }
+    
 
 }

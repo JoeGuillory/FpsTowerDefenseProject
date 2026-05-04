@@ -1,6 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     public float MoveSpeed = 5;
     public float SprintSpeed = 9;
@@ -24,8 +25,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!IsOwner)
+            return;
         _isGrounded = _controller.isGrounded;
-
         ProcessMove(_input.move);
         //Jump();
     }
