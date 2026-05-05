@@ -54,6 +54,8 @@ public class TestRelay : MonoBehaviour
             var transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
 
             RelayServerData joinAllocation = AllocationUtils.ToRelayServerData(join, "udp");
+
+            Debug.Log(joinAllocation);
             transport.SetRelayServerData(joinAllocation);
 
             NetworkManager.Singleton.StartClient();
