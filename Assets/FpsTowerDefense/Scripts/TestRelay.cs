@@ -49,6 +49,7 @@ public class TestRelay : MonoBehaviour
     {
         try
         {
+            Debug.Log("Tried Joinging");
             JoinAllocation join =  await RelayService.Instance.JoinAllocationAsync(Code);
 
             var transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
