@@ -1183,6 +1183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4146557fa8fdb42bacdb92f930be91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  CurrentLobbyId: 0
+  _networkManager: {fileID: 826597010}
 --- !u!1 &1584639500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,9 +1268,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1684531262}
-        m_TargetAssemblyTypeName: TestRelay, Assembly-CSharp
-        m_MethodName: CreateRelay
+      - m_Target: {fileID: 1546553808}
+        m_TargetAssemblyTypeName: SteamTestScript, Assembly-CSharp
+        m_MethodName: HostLobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1360,7 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5681f4f3f8ba90b44afc29716ce0744e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestRelay
-  Code: W86KW7
+  code: 
 --- !u!1 &1757621212
 GameObject:
   m_ObjectHideFlags: 0
