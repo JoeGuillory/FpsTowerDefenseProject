@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40064be49bf7354cb8a556c146f928b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLook
+  ShowTopMostFoldoutHeaderGroup: 1
   _camera: {fileID: 9098571997895383088}
   _cameraObject: {fileID: 8539683480386409154}
   xSensitivity: 30
