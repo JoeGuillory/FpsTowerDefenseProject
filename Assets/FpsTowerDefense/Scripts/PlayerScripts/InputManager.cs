@@ -8,7 +8,14 @@ public class InputManager : MonoBehaviour
     public bool IsJumping;
     public bool IsSprinting;
 
-  
+    private PlayerInput _playerInput;
+    private InputActionMap _actionMap;
+    private void Awake()
+    {
+        _playerInput = GetComponent<PlayerInput>();
+    }
+
+
     public void OnMove(InputValue value)
     {
         MoveInput(value.Get<Vector2>());
@@ -21,7 +28,9 @@ public class InputManager : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
+        
         JumpInput(value.isPressed);
+        
     }
 
     public void OnSprint(InputValue value)

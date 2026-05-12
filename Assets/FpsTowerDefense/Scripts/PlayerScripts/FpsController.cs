@@ -24,6 +24,8 @@ public class FpsController : MonoBehaviour
 
     public void MoveAndFall(Vector2 input)
     {
+
+        Debug.Log(_input.IsSprinting);
         float speed = _input.IsSprinting ? _sprintSpeed : _moveSpeed;
 
         if (_controller.isGrounded && _velocity.y < 0)
